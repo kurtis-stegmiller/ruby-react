@@ -1,0 +1,25 @@
+// Variables
+$body-color: #707070;
+$block-color: #232424;
+$base-color: #BC1905;
+$white-color: #fff;
+$link-color: #EAEAEA;
+$input-text-color: #858585;
+$text-color: #4D4D4D;
+$color-dark: #232424;
+
+// Commons
+@import "./common.scss";
+@import "./fonts.scss";
+
+// Components
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/modal.scss";
+@import "./components/table.scss";
+
+// Pages 
+@import "./pages/home.scss";
+
+
+@import "./media.scss";

@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    build: .
+    container_name: "123-web"
+    # command: bash -c "(bundle check || bundle install) && puma -b tcp://0.0.0.0:4200 -t 1:1 -w 1 --preload"
+    command: bash -c "foreman start"
+    # command: /bin/bash
+    tty: true
+    volumes:
+      - .:/app
+      - ./.ssh:/root/.ssh
+#      - ./gems:/gems:rw
+    ports:
+      - "4500:4500"
+      - "4501:4501"
+    env_file:
+      - .env
+    environment:
+      - VIRTUAL_HOST=123
+networks:
+  default:
+    external:
+      name: dbnet

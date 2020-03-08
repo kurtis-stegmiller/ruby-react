@@ -1,0 +1,39 @@
+<div class="row my-5">
+  <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-lg-2 p-5">
+    <h2 class="my-3">Change your password</h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: {method: :put}) do |f| %>
+      <%= f.error_notification %>
+
+      <%= f.input :reset_password_token, as: :hidden %>
+      <%= f.full_error :reset_password_token %>
+
+      <div class="md-form form-sm mb-4">
+        <i class="fa fa-lock prefix"></i>
+        <input class="form-control password required"
+               autofocus="autofocus"
+               required="required" type="password"
+               name="user[password]" id="user_password">
+        <label class="control-label password required"
+               for="user_password">New password</label>
+        <p class="help-block">6 characters minimum</p>
+      </div>
+
+      <div class="md-form form-sm mb-4">
+        <i class="fa fa-lock prefix"></i>
+        <input class="form-control password required"
+               required="required" aria-required="true"
+               type="password" name="user[password_confirmation]"
+               id="user_password_confirmation">
+        <label class="control-label password required"
+               for="user_password_confirmation">Confirm your new password</label>
+      </div>
+
+
+      <div class="form-actions">
+        <%= f.button :submit, "Change my password", class: 'btn waves-effect bgcolor-my-blue btn-rounded' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

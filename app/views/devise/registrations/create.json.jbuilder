@@ -1,0 +1,1 @@
+json.partial! 'devise/user', user: resource

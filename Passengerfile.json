@@ -1,0 +1,10 @@
+{
+  "unlimited_concurrency_paths": [
+    "/cable"
+  ],
+  "daemonize": true,
+  "address": "127.0.0.1",
+  "port": 4500,
+  "log_file": "log/passenger.log",
+  "pid_file": "log/passenger.pid"
+}

@@ -1,0 +1,24 @@
+// .footer {
+//     padding: 15px;
+// }
+
+.footer .container {
+    display: flex;
+    box-sizing: border-box;
+    min-height: 90px;
+    margin-top: 30px;
+    justify-content: space-between;
+    background-color: $color-dark;
+    padding: 20px 0;
+}
+
+.footer-copyright {
+    font-family: "Myriad Pro Regular";
+    font-size: 26px;
+    color: $link-color;
+}
+
+.footer .btn.link {
+    padding: 0;
+    text-align: right;
+}

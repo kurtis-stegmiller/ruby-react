@@ -1,0 +1,84 @@
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1053px;
+    }
+}
+
+@media (max-width: 768px) {
+    .enterUrl {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .enterUrl .input-default {
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+
+    .enterUrl .btn.default {
+        max-width: 100%;
+    }
+    .header_btnWrap {
+        display:block;
+        text-align: right;
+    }
+    .btn.auth {
+        text-align: right;
+    }
+
+    .header_btnWrap button:not(:last-child) {
+        margin-right: 0px;
+    }
+
+    .wrap-info {
+        flex-direction: column;
+    }
+
+    .info:first-child {
+        margin-right: auto;
+        margin-bottom: 15px;
+    }
+
+    .enterUrl_wrapActionInputs {
+        flex-direction: column
+    }
+
+    .modal_content {
+        margin-right: 15px;
+        margin-left: 15px;
+        max-width: 100%;
+    }
+
+    .SubscriptionsModal {
+        overflow-y: auto;
+        height: 90vh;
+        width: 100vh;
+        margin-top: 5vh;
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .SubItems {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 80px;
+    }
+
+    .modal_content {
+        overflow-y: auto;
+    }
+}

@@ -1,0 +1,462 @@
+.tbl {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  background-color: $white-color;
+  overflow-y: auto;
+}
+
+.row {
+  display: flex;
+  min-height: 61px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #c7c7c7;
+  padding: 0 44px;
+  min-width: fit-content;
+}
+
+.cell {
+  flex: 7;
+  box-sizing: border-box;
+}
+
+.row:first-child .cell {
+  display: flex;
+  justify-content: flex-start;
+  /*  center horiz. */
+  align-items: center;
+  /*  center vert. */
+}
+
+.row .cell {
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.row.expired .cell {
+  text-decoration: line-through;
+}
+
+.row.expired .cell.cell_click {
+  text-decoration: none;
+}
+
+.row.expired .cell.cell_expiration {
+  color: $base-color;
+}
+
+.tbl_header {
+  font-family: "Myriad Pro Regular";
+  padding-top: 20px;
+  padding: 16px 40px;
+  box-sizing: border-box;
+  font-size: 24px;
+  text-align: left;
+  letter-spacing: 0;
+  color: #eaeaea;
+  height: 50px;
+  background: $base-color;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 3px;
+}
+
+.cell_icon {
+  min-width: 40px;
+  max-width: 40px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.cell_header {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Myriad Pro Semibold";
+  color: #4d4d4d;
+  opacity: 1;
+  white-space: nowrap;
+}
+
+.cell_header span {
+  font-family: "Myriad Pro Regular";
+  color: #858585;
+  margin-left: 5px;
+}
+
+.wrap_link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+}
+
+.cell_link {
+  min-width: 470px;
+  max-width: 470px;
+  width: 100%;
+}
+
+.cell_keywords {
+  min-width: 150px;
+  max-width: 150px;
+  position: relative;
+}
+
+.cell_keywords:hover .tooltip {
+  display: block;
+}
+
+.cell_expiration {
+  min-width: 160px;
+  max-width: 160px;
+}
+
+.row .cell.cell_click {
+  min-width: 100px;
+  max-width: 100px;
+  justify-content: space-between;
+}
+
+.row.expired .cell.cell_click .text_hover {
+  cursor: default;
+}
+
+.row.expired .cell.cell_click .text_hover:hover {
+  color: #4d4d4d;
+}
+
+//  ------------
+.icon_delete {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.icon_info.active {
+  opacity: 0.7;
+}
+
+.icon_info,
+.icon_edit {
+  width: 15px;
+  height: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+// ----------------------
+.checkbox {
+  top: 2px;
+  width: auto;
+  height: auto;
+}
+
+.checkbox svg {
+  width: 20px;
+  height: 20px;
+  transform: none;
+}
+
+.checkbox svg rect {
+  fill: #c7c7c7;
+  stroke: #c7c7c7;
+  stroke-width: 2px;
+}
+
+.checkbox.checked svg rect,
+.checkbox.unchecked svg rect {
+  fill: transparent;
+}
+
+.checkbox svg path {
+  stroke: #858585 !important;
+}
+
+// ------------
+.cell_wrapIcons {
+  display: flex;
+}
+
+.dpowDown {
+  position: relative;
+}
+
+.dpowDown_content {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 125px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  z-index: 1;
+  padding: 15px 0;
+  padding-bottom: 0;
+}
+
+.dpowDown_item_icon {
+  width: 15px;
+  margin-right: 15px;
+  height: 15px;
+  display: block;
+}
+
+.dpowDown_item {
+  padding: 0 10px;
+  display: flex;
+  height: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 16px;
+  font-family: "Myriad Pro Regular";
+  color: #4d4d4d;
+  cursor: pointer;
+}
+
+// Modal type
+.EditDescriptionModal {
+  max-width: 488px;
+  max-height: 230px;
+}
+
+.EditUrlModal {
+  max-width: 940px;
+  max-height: 230px;
+}
+
+.DeleteModalMulti,
+.DeleteModal {
+  min-height: 230px;
+  width: 488px;
+  height: auto;
+}
+
+.ClickModal {
+  max-width: 488px;
+  height: 200px;
+}
+
+.ExpiredModal {
+  max-width: 446px;
+  height: 200px;
+}
+
+.SubscriptionsModal {
+  max-width: 972px;
+  min-height: 466px;
+}
+
+.SubscriptionsModal .modalTable_header {
+  height: 60px;
+  justify-content: center;
+}
+
+.SubItems {
+  display: flex;
+  justify-content: center;
+}
+
+.SubItem {
+  width: 250px;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: 1s;
+  transform: scale(1);
+}
+
+.SubItem:hover {
+  transition: 0.6s;
+  transform: scale(1.1);
+
+  .SubItem_content .btn.default.grey {
+    background-color: #bc1905;
+  }
+}
+
+.SubItem_header {
+  background: #bc1905;
+  height: 60px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Myriad Pro Regular";
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SubItem_title {
+  text-align: center;
+  font-size: 28px;
+  font-family: "Myriad Pro Regular";
+  color: #4d4d4d;
+  display: flex;
+  justify-content: center;
+  margin-top: 33px;
+}
+
+.SubItem_content .btn.default.grey {
+  background-color: #858585;
+}
+
+.SubItem_content .btn.default {
+  max-width: 141px;
+  position: absolute;
+  bottom: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.SubItem_content {
+  position: relative;
+  border: 1px solid #707070;
+  height: 190px;
+}
+
+.SubItem_description {
+  font-family: "Myriad Pro Regular";
+  text-align: center;
+  font-size: 20px;
+  color: #8b8b8b;
+  margin-top: 4px;
+}
+
+.SubItem_save {
+  text-align: center;
+  font-family: "Myriad Pro Italic";
+  font-size: 20px;
+  color: #bc1905;
+  margin-top: 22px;
+  position: relative;
+}
+
+.SubItem_save::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 1px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #bc1905;
+}
+
+.SubItem_save::after {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 1px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #bc1905;
+}
+
+.modalTable_header {
+  height: 50px;
+  background: #bc1905 0% 0% no-repeat padding-box;
+  padding-left: 40px;
+  font-family: "Myriad Pro Regular";
+  font-size: 24px;
+  color: #eaeaea;
+  display: flex;
+  align-items: center;
+}
+
+.modalTable_content {
+  padding: 25px 35px 15px 35px;
+}
+
+.modalTable_input_wrap {
+  position: relative;
+}
+
+.modalTable_input_wrap .error_input {
+  position: relative;
+  bottom: 13px;
+}
+
+.modalTable_content .input-default {
+  border: solid 2px #c7c7c7;
+  border-radius: 5px;
+  margin-bottom: 23px;
+  box-sizing: border-box;
+}
+
+.modalTable_content .btn.default {
+  max-width: 190px;
+  margin: 0 auto;
+  display: block;
+}
+
+.modalTable_description {
+  font-family: "Myriad Pro Regular";
+  font-size: 24px;
+  color: #232424;
+  margin-bottom: 30px;
+}
+
+.close_icon {
+  position: absolute;
+  right: 18px;
+  top: 20px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.close_icon:hover {
+  opacity: 0.3;
+}
+
+.close_icon:before,
+.close_icon:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 11px;
+  width: 3px;
+  background-color: #fff;
+}
+
+.close_icon:before {
+  transform: rotate(45deg);
+}
+
+.close_icon:after {
+  transform: rotate(-45deg);
+}
+
+.wrapExpiredBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapExpiredBtn .btn.default,
+.wrapExpiredBtn .btn.link {
+  max-width: 87px;
+  margin: 0;
+}
+
+.wrapExpiredBtn .btn.link {
+  color: #232424;
+  text-decoration: underline;
+}
+
+.tooltip {
+  display: none;
+  background: #bc1905;
+  color: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transform: translateX(-30%);
+  padding: 1px 10px;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

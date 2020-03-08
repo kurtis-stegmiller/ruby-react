@@ -1,0 +1,132 @@
+.baner {
+    width: 100%;
+    height: 250px;
+    border-radius: 3px;
+}
+
+.enterUrl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 91px;
+    margin: 15px 0;
+    background-color: $block-color;
+    padding: 21px 21px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    align-items: flex-end;
+}
+
+.enterUrl .input-default {
+    margin-right: 15px;
+}
+
+.enterUrl .btn.default {
+    height: 50px;
+    max-width: 230px;
+}
+
+.enterUrl_wrapInputs {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+}
+
+.enterUrl_wrapActionInputs {
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.enterUrl_alert {
+    background-color: $base-color;
+    min-height: 64px;
+    padding: 26px;
+    box-sizing: border-box;
+    color: $link-color;
+    font-family: 'Myriad Pro Regular';
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: -15px;
+    border-radius: 0 0 5px 5px;
+
+}
+
+.enterUrl_alert a {
+    font-family: 'Myriad Pro Bold';
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+.wrap-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.info {
+    width: 100%;
+    background: $white-color;
+    padding: 30px;
+    box-sizing: border-box;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.info:first-child {
+    margin-right: 15px;
+}
+
+.info_title {
+    font-size: 24px;
+    font-family: 'Myriad Pro Bold';
+    color: $base-color;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info_description {
+    color: $text-color;
+    text-align: center;
+    max-width: 366px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Myriad Pro Regular';
+    margin: 0 auto;
+    height: 100%;
+    line-height: 27px;
+
+}
+
+.simplifyYourLinks {
+    background: $white-color;
+    padding: 34px 15px;
+    box-sizing: border-box;
+    min-height: 240px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.simplifyYourLinks-images {
+    width: 126px;
+    height: 125px;
+    margin-bottom: 22px;
+}
+
+.simplifyYourLinks-text {
+    font-size: 28px;
+    font-family: 'Myriad Pro Bold';
+    color: $color-dark;
+    text-transform: uppercase;
+}
